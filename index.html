@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Leitura de baralho cigano online com a Vivi Cartomante. Amor, relacionamentos e decisões de vida.">
+    <meta name="theme-color" content="#170d22">
+    <meta property="og:title" content="Vivi Cartomante | Leitura de Baralho Cigano Online">
+    <meta property="og:description" content="Clareza para o amor e para as decisões que pesam. Atendimento online com sigilo.">
+    <meta property="og:image" content="logo.png">
+    <title>Vivi Cartomante | Leitura de Baralho Cigano Online</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Logo Vivi Cartomante" class="logo-img">
+            <h1>Vivi Cartomante</h1>
+        </div>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-controls="navMenu">
+            <span></span><span></span><span></span>
+        </button>
+
+        <nav class="nav" id="navMenu">
+            <ul>
+                <li><a href="#inicio" onclick="fecharMenu()">Início</a></li>
+                <li><a href="#sobre" onclick="fecharMenu()">Sobre</a></li>
+                <li><a href="#servicos" onclick="fecharMenu()">Consultas</a></li>
+                <li><a href="#tiragem" onclick="fecharMenu()">Carta do Dia</a></li>
+                <li><a href="#contato" class="btn-nav" onclick="fecharMenu()">Agendar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero-wrap">
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h2>Clareza para o seu amor e para as decisões que pesam</h2>
+            <p>Leitura de baralho cigano com acolhimento e sigilo, para você enxergar o que sente, o que o outro sente e qual o próximo passo.</p>
+            <a href="#contato" class="btn-primary">Agendar minha leitura</a>
+        </div>
+        <div class="leque" aria-hidden="true">
+            <div class="carta c1"><img src="logo.png" alt=""></div>
+            <div class="carta c3"><img src="logo.png" alt=""></div>
+            <div class="carta c2"><img src="logo.png" alt=""></div>
+        </div>
+    </section>
+    </div>
+
+    <section id="sobre" class="section sobre">
+        <div class="container">
+            <div class="sobre-img">
+                <img src="logo.png" alt="Vivi Cartomante" class="avatar-img">
+            </div>
+            <div class="sobre-text">
+                <h2>Sobre a Vivi</h2>
+                <p>Olá, seja bem-vindo(a). Sou orientadora espiritual e cartomante, com mais de 1 ano de experiência guiando pessoas em busca de respostas.</p>
+                <p>Meu trabalho une a sabedoria das cartas a um atendimento acolhedor, para ajudar você a tomar as melhores decisões e entender as energias ao seu redor.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos" class="section servicos">
+        <h2>Consultas</h2>
+        <p>Escolha a tiragem que combina com a sua pergunta.</p>
+        <div class="lista-servicos">
+            <article class="servico">
+                <h3>Templo de Afrodite</h3>
+                <p>Tiragem de 7 cartas que revela a dinâmica amorosa entre duas pessoas: pensamentos, sentimentos, atitudes, energias, desafios, futuro potencial, conselho e a evolução da conexão entre elas.</p>
+                <a href="#contato" class="btn-card" data-servico="Templo de Afrodite">Agendar esta tiragem</a>
+            </article>
+            <article class="servico">
+                <h3>Templo do Diabo</h3>
+                <p>Não é uma tiragem para quem quer conforto, é para quem quer clareza. Ideal para quem sente que algo está errado, mas não consegue provar, ou precisa decidir se continua alimentando um laço baseado em desejo, manipulação ou medo de perder. Uma leitura para enxergar a verdade como ela é e retomar o próprio poder.</p>
+                <a href="#contato" class="btn-card" data-servico="Templo do Diabo">Agendar esta tiragem</a>
+            </article>
+            <article class="servico">
+                <h3>Tiragem do Ex</h3>
+                <p>Perfeita para quem busca clareza. Deixa menos espaço para dúvidas e mais para decisões conscientes, mesmo com as emoções turbulentas. Mostra onde ainda há verdade, onde só há memória e onde está a sua força para seguir adiante, seja reconstruindo ou se libertando.</p>
+                <a href="#contato" class="btn-card" data-servico="Tiragem do Ex">Agendar esta tiragem</a>
+            </article>
+        </div>
+    </section>
+
+    <section id="como-funciona" class="section">
+        <h2>Como funciona</h2>
+        <p>Tudo acontece online, no seu tempo.</p>
+        <ol class="passos">
+            <li><h3>Escolha a tiragem</h3><p>Selecione a consulta e preencha o formulário com seu nome e WhatsApp.</p></li>
+            <li><h3>Combine com a Vivi</h3><p>Pelo WhatsApp, você conta sua situação e acerta os detalhes do atendimento.</p></li>
+            <li><h3>Receba sua leitura</h3><p>A leitura chega em fotos das cartas e áudios gravados, com sigilo total.</p></li>
+        </ol>
+    </section>
+
+    <section id="tiragem" class="section tiragem">
+        <h2>Tire sua Carta do Dia</h2>
+        <p>Pense em uma pergunta e toque na carta para receber um conselho rápido.</p>
+
+        <div class="tarot-container">
+            <div class="tarot-card" id="tarotCard" role="button" tabindex="0" aria-label="Virar a carta do dia" onclick="tirarCarta()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();tirarCarta();}">
+                <div class="card-face card-back">
+                    <img src="logo.png" alt="" class="card-back-img">
+                </div>
+                <div class="card-face card-front" id="cardResult">
+                    <h3 id="cardTitle">A Sacerdotisa</h3>
+                    <p id="cardDesc">Confie na sua intuição. O momento pede reflexão e sabedoria interior.</p>
+                </div>
+            </div>
+        </div>
+        <p class="dica-carta">Toque de novo na carta para virá-la e tirar outra.</p>
+    </section>
+
+    <section id="contato" class="section contato">
+        <h2>Agende sua Consulta</h2>
+        <p>Os atendimentos são online, por fotos e áudios gravados, com total sigilo.</p>
+
+        <form class="form-agendamento" onsubmit="enviarWhatsapp(event)">
+            <input type="text" id="nome" placeholder="Seu nome completo" autocomplete="name" required>
+            <input type="tel" id="whatsapp" placeholder="Seu WhatsApp (com DDD)" autocomplete="tel" required>
+            <select id="servicoSelect" required>
+                <option value="" disabled selected>Selecione o tipo de consulta</option>
+                <option value="Templo de Afrodite">Templo de Afrodite</option>
+                <option value="Templo do Diabo">Templo do Diabo</option>
+                <option value="Tiragem do Ex">Tiragem do Ex</option>
+            </select>
+            <textarea id="mensagem" placeholder="Sua mensagem ou melhor horário (opcional)" rows="4"></textarea>
+            <button type="submit" class="btn-primary">Agendar pelo WhatsApp</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Vivi Cartomante. Todos os direitos reservados.</p>
+        <p>Atendimentos online com sigilo e respeito absoluto.</p>
+    </footer>
+
+    <a class="zap-fixo" href="https://wa.me/558881560017" target="_blank" rel="noopener">Falar no WhatsApp</a>
+
+    <script>
+        // Menu mobile
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        function fecharMenu() {
+            menuToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+        }
+
+        // Botões "Agendar esta tiragem" já escolhem a consulta no formulário
+        document.querySelectorAll('[data-servico]').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('servicoSelect').value = link.dataset.servico;
+            });
+        });
+
+        // Carta do dia
+        const cartas = [
+            { titulo: "O Louco", desc: "Novos começos estão a caminho. Dê um salto de fé e confie no universo." },
+            { titulo: "O Mago", desc: "Você tem todas as ferramentas necessárias para manifestar o que deseja." },
+            { titulo: "A Sacerdotisa", desc: "Momento de olhar para dentro. Ouça sua intuição antes de tomar decisões." },
+            { titulo: "A Imperatriz", desc: "Fase de prosperidade, criação e abundância nos seus projetos e sentimentos." },
+            { titulo: "O Sol", desc: "Clareza, alegria e sucesso. As sombras se dissipam do seu caminho." },
+            { titulo: "A Estrela", desc: "Esperança renovada e proteção espiritual. Mantenha a fé no futuro." }
+        ];
+
+        function tirarCarta() {
+            const cardElement = document.getElementById('tarotCard');
+            if (cardElement.classList.contains('flipped')) {
+                cardElement.classList.remove('flipped');
+                return;
+            }
+            const sorteada = cartas[Math.floor(Math.random() * cartas.length)];
+            document.getElementById('cardTitle').innerText = sorteada.titulo;
+            document.getElementById('cardDesc').innerText = sorteada.desc;
+            cardElement.classList.add('flipped');
+        }
+
+        // Envio pelo WhatsApp
+        function enviarWhatsapp(event) {
+            event.preventDefault();
+            const nome = document.getElementById('nome').value;
+            const whatsappCartomante = "558881560017";
+            const servico = document.getElementById('servicoSelect').value;
+            const mensagem = document.getElementById('mensagem').value;
+
+            const texto = `Olá! Meu nome é ${nome}. Gostaria de agendar uma consulta de *${servico}*. ${mensagem ? '\nObservação: ' + mensagem : ''}`;
+            const url = `https://wa.me/${whatsappCartomante}?text=${encodeURIComponent(texto)}`;
+
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
