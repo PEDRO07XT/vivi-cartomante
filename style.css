@@ -218,3 +218,10 @@ footer { padding: 2.5rem 6%; background: #0f0817; text-align: center; color: var
     transition: transform .2s, background .2s;
 }
 .zap-fixo:hover { background: #f0c4c8; transform: translateY(-2px); }
+
+/* Celular: o desfoque no cabeçalho pode quebrar o menu em tela cheia, então sai daqui */
+@media (max-width: 768px) {
+    .header { backdrop-filter: none; background: rgba(23, 13, 34, 0.98); }
+    .zap-fixo { padding: .7rem 1.1rem; font-size: .95rem; }
+    .form-agendamento input, .form-agendamento select, .form-agendamento textarea { font-size: 16px; }
+}
